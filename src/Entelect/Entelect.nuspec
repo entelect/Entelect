@@ -8,7 +8,7 @@
 		<owners>Entelect</owners>
 		<projectUrl>https://github.com/Sereph/Entelect</projectUrl>
 		<iconUrl>https://encentivize.blob.core.windows.net/2-cms/entelectlogo.jpg</iconUrl>
-    <licenseUrl></licenseUrl>
+    <licenseUrl>https://github.com/Sereph/Entelect/blob/master/License.txt</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>$description$</description>
 		<copyright>Copyright © Entelect 2011</copyright>
