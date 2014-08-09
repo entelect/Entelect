@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>$id$</id>
+		<version>$version$</version>
+		<title>Entelect</title>
+		<authors>$author$</authors>
+		<owners>Entelect</owners>
+		<projectUrl>http://www.entelect.co.za</projectUrl>
+		<iconUrl>https://encentivize.blob.core.windows.net/2-cms/entelectlogo.jpg</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>$description$</description>
+		<copyright>Copyright © 2011</copyright>
+		<tags>Entelect</tags>
+	</metadata>
+</package>
