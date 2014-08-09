@@ -6,11 +6,12 @@
 		<title>Entelect</title>
 		<authors>$author$</authors>
 		<owners>Entelect</owners>
-		<projectUrl>http://www.entelect.co.za</projectUrl>
+		<projectUrl>https://github.com/Sereph/Entelect</projectUrl>
 		<iconUrl>https://encentivize.blob.core.windows.net/2-cms/entelectlogo.jpg</iconUrl>
+    <licenseUrl></licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>$description$</description>
-		<copyright>Copyright © 2011</copyright>
+		<copyright>Copyright Â© Entelect 2011</copyright>
 		<tags>Entelect</tags>
 	</metadata>
 </package>

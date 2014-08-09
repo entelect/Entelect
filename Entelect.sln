@@ -4,9 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entelect", "src\Entelect\Entelect.csproj", "{E77C5E2D-FA11-4D8E-925D-A2607C8FE424}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D8EA0E23-C10E-4742-B329-AF2D2A8E0111}"
-	ProjectSection(SolutionItems) = preProject
-		CommonAssemblyInfo.cs = CommonAssemblyInfo.cs
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entelect.Tests", "src\Entelect.Tests\Entelect.Tests.csproj", "{A22A0C9F-F1BA-4BD3-8726-896BB683A560}"
 EndProject
