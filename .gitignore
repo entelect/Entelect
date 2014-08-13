@@ -4,7 +4,6 @@
 packages
 graphics
 _ReSharper.*
-docs
 *.suo
 *.DS_Store
 [Tt]humbs.db
