@@ -15,6 +15,14 @@ namespace Entelect.Extensions
         /// <param name="value">The string with the format placeholders.</param>
         /// <param name="arg0">The parameter to use within the formatted string.</param>
         /// <returns>The StringBuilder with the appended information</returns>
+        /// <example>  
+        /// This sample shows how to use the method.
+        /// <code> 
+        /// var stringBuilder = new StringBuilder();
+        /// stringBuilder.AppendLineFormat("Hello {0}", "World");
+        /// return stringBuilder.ToString(); //Will output Hello World\r\n
+        /// </code> 
+        /// </example> 
         public static StringBuilder AppendLineFormat(this StringBuilder input, string value, object arg0)
         {
             return input.AppendFormat(value, arg0).AppendLine();
