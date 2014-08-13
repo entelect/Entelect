@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-// ReSharper disable once CheckNamespace - All extensions are within the same namespace otherwise they don't show up in intellisense
+// ReSharper disable once CheckNamespace - All extensions are within the same name space otherwise they don't show up in intellisense
 namespace Entelect.Extensions
 {
     public static class StringBuilderExtensions
