@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>Entelect</id>
-		<version>$version$</version>
-		<title>Entelect</title>
-		<authors>$author$</authors>
-		<owners>Entelect</owners>
-		<projectUrl>https://github.com/Sereph/Entelect</projectUrl>
-		<iconUrl>https://encentivize.blob.core.windows.net/2-cms/entelectlogo.jpg</iconUrl>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>Entelect</title>
+    <authors>$author$</authors>
+    <owners>Entelect</owners>
+    <projectUrl>https://github.com/Sereph/Entelect</projectUrl>
+    <iconUrl>https://encentivize.blob.core.windows.net/2-cms/entelectlogo.jpg</iconUrl>
     <licenseUrl>https://github.com/Sereph/Entelect/blob/master/License.txt</licenseUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>$description$</description>
-		<copyright>Copyright © Entelect 2011</copyright>
-		<tags>Entelect</tags>
-	</metadata>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <copyright>Copyright © Entelect 2011</copyright>
+    <tags>Entelect</tags>
+  </metadata>
 </package>
