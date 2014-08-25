@@ -67,3 +67,4 @@ packages/
 *.testsettings
 error-*.xml
 documentation/Help/*
+docs/Help/*
