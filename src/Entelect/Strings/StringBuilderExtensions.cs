@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Text;
+﻿using System.Text;
 
 // ReSharper disable once CheckNamespace - All extensions are within the same name space otherwise they don't show up in intellisense
 namespace Entelect.Extensions
