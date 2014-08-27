@@ -26,14 +26,6 @@ namespace Entelect.Extensions
         /// </example> 
         public static StringBuilder AppendLineFormat(this StringBuilder input, string value, object arg0)
         {
-            using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
-            {
-                using (var writer = new StreamWriter(stream))
-                {
-                    // Use the writer object...
-                    
-                }
-            }
             return input.AppendFormat(value, arg0).AppendLine();
         }
 
