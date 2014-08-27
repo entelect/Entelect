@@ -7,4 +7,4 @@ Continuous Integration [![Build status](https://teamcity.entelect.co.za:8443/app
 
 [Help Documentation](http://sereph.github.io/Entelect/)
 
-[Nuget Url](https://www.nuget.org/packages/Entelect/)
+[NuGet](https://www.nuget.org/packages/Entelect/)
