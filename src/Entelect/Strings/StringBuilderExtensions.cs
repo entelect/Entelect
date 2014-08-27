@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 
 // ReSharper disable once CheckNamespace - All extensions are within the same name space otherwise they don't show up in intellisense
 namespace Entelect.Extensions
@@ -25,6 +26,14 @@ namespace Entelect.Extensions
         /// </example> 
         public static StringBuilder AppendLineFormat(this StringBuilder input, string value, object arg0)
         {
+            using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
+            {
+                using (var writer = new StreamWriter(stream))
+                {
+                    // Use the writer object...
+                    
+                }
+            }
             return input.AppendFormat(value, arg0).AppendLine();
         }
 
