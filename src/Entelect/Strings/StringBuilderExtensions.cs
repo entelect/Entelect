@@ -9,7 +9,7 @@ namespace Entelect.Extensions
     public static class StringBuilderExtensions
     {
         /// <summary>
-        /// Appends the args and a new line character
+        /// Appends the args and a new line character, basically a shorthand form of input.AppendFormat(...).AppendLine()
         /// </summary>
         /// <param name="input">The string builder to append to.</param>
         /// <param name="value">The string with the format placeholders.</param>
