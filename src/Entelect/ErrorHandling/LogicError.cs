@@ -1,5 +1,7 @@
 ﻿namespace Entelect.ErrorHandling
 {
+    /* TODO rk, write some sort of localization helper to display the looked up message with the correct params */
+
     /// <summary>
     /// Logic errors are represents errors that can safely be displayed to the user.
     /// This is so that they know why something has gone wrong, instead of seeing a general error page and can possibly correct themselves.
