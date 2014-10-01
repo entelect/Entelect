@@ -11,6 +11,35 @@ namespace Entelect.ErrorHandling
     public class LogicErrors : Collection<LogicError>
     {
         /// <summary>
+        /// A collection of <see cref="T:Entelect.ErrorHandling.LogicError"/>
+        /// Contains a set of helper methods that makes working with multiple logic errors easier.
+        /// </summary>
+        public LogicErrors()
+        {
+        }
+
+        /// <summary>
+        /// A collection of <see cref="T:Entelect.ErrorHandling.LogicError"/>
+        /// Contains a set of helper methods that makes working with multiple logic errors easier.
+        /// </summary>
+        /// <param name="list">The collection of <see cref="T:Entelect.ErrorHandling.LogicError"/> to be contained in the list</param>
+        public LogicErrors(IList<LogicError> list) 
+            : base(list)
+        {
+        }
+
+        /// <summary>
+        /// A collection of <see cref="T:Entelect.ErrorHandling.LogicError"/>
+        /// Contains a set of helper methods that makes working with multiple logic errors easier.
+        /// </summary>
+        /// <param name="error">The initial error to include in the collection</param>
+        public LogicErrors(LogicError error)
+            : base(new Collection<LogicError> {error})
+        {
+
+        }
+
+        /// <summary>
         /// Checks if the current collection has any items
         /// </summary>
         public bool HasErrors

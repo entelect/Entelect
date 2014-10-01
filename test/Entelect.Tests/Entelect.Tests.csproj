@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandling\LogicErrorsTests.cs" />
     <Compile Include="ErrorHandling\LogicErrorTests.cs" />
     <Compile Include="ErrorHandling\TestLogicError.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
