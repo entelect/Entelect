@@ -8,6 +8,7 @@ namespace Entelect.ErrorHandling
     /// <summary>
     /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
     /// </summary>
+    [Serializable]
     public class LogicException : Exception
     {
         /// <summary>
@@ -20,6 +21,12 @@ namespace Entelect.ErrorHandling
             : base(message)
         {
             Errors = new LogicErrors {error};
+        }
+
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            /* todo rk, implement this correctly */
+            base.GetObjectData(info, context);
         }
 
         /// <summary>
