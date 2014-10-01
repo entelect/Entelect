@@ -38,7 +38,6 @@ namespace Entelect.Tests.ErrorHandling
             StringAssert.Contains(logicException.Message, Message);
         }
 
-
         [Test]
         public void AbilityToCreateLogicExptionWithLogicErrorAndMessageAndInnerException()
         {
