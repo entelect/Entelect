@@ -19,8 +19,7 @@ namespace Entelect.ErrorHandling
         public LogicException(string message, LogicError error)
             : base(message)
         {
-            Errors = new LogicErrors();
-            Errors.Add(error);
+            Errors = new LogicErrors {error};
         }
 
         /// <summary>
@@ -33,8 +32,7 @@ namespace Entelect.ErrorHandling
         public LogicException(string message, LogicError error, Exception inner)
             : base(message, inner)
         {
-            Errors = new LogicErrors();
-            Errors.Add(error);
+            Errors = new LogicErrors {error};
         }
 
         /// <summary>
