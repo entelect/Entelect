@@ -48,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ErrorHandling\ArgumentNullError.cs" />
+    <Compile Include="ErrorHandling\LogicError.cs" />
+    <Compile Include="ErrorHandling\LogicErrors.cs" />
+    <Compile Include="ErrorHandling\LogicException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\StringBuilderExtensions.cs" />
   </ItemGroup>
