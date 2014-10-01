@@ -5,6 +5,8 @@ using System.Text;
 
 namespace Entelect.ErrorHandling
 {
+    /*todo rk, refactor these consturcotrs to use optional paramaters instead*/
+    /* do we need to have the message param? */
     /// <summary>
     /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
     /// </summary>

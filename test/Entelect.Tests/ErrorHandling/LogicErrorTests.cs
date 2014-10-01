@@ -1,5 +1,4 @@
-﻿using System;
-using Entelect.ErrorHandling;
+﻿using Entelect.ErrorHandling;
 using NUnit.Framework;
 
 namespace Entelect.Tests.ErrorHandling
