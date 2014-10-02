@@ -60,10 +60,13 @@ namespace Entelect.ErrorHandling
         /// <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination. </param>
         /// <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is null. </exception>
         /// <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is null or <see cref="P:System.Exception.HResult"/> is zero (0). </exception>
-        protected LogicException(SerializationInfo info, StreamingContext context)
+        /// <param name="errors">The collection of errors that caused this exception</param>
+        /// <param name="additionalMessage">Any additional information to display about the exception</param>
+        protected LogicException(SerializationInfo info, StreamingContext context, LogicErrors errors, string additionalMessage = null)
             : base(info, context)
         {
-            Errors = new LogicErrors();
+            Errors = errors;
+            AdditionalMessage = AdditionalMessage;
         }
 
         /// <summary>
@@ -83,6 +86,14 @@ namespace Entelect.ErrorHandling
             base.GetObjectData(info, context);
         }
 
+        /// <summary>
+        /// Gets a message that describes the current exception.
+        /// </summary>
+        /// 
+        /// <returns>
+        /// The error message that explains the reason for the exception, or an empty string ("").
+        /// </returns>
+        /// <filterpriority>1</filterpriority>
         public override string Message
         {
             get { return GetAllMessages(AdditionalMessage, Errors); }
