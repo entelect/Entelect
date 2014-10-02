@@ -91,6 +91,12 @@ namespace Entelect.Tests.ErrorHandling
             logicErrors.ThrowExceptionIfErrors();
         }
         [Test]
+        public void DoesNotThrowExceptionIfNoErrors()
+        {
+            var logicErrors = new LogicErrors();
+            logicErrors.ThrowExceptionIfErrors();
+        }
+        [Test]
         public void GetCombinedMessagesWithMultipleMessages()
         {
             const string message1 = "Message 1";
@@ -101,6 +107,17 @@ namespace Entelect.Tests.ErrorHandling
             var combinedMessage = logicErrors.GetCombinedMessages();
             StringAssert.Contains(message1, combinedMessage);
             StringAssert.Contains(message2, combinedMessage);
+        }
+        [Test]
+        public void GetCombinedMessagesWithMultipleMessagesAndOneIsNull()
+        {
+            const string message1 = "Message 1";
+            var testLogicError1 = new TestLogicError(message1);
+            var testLogicError2 = new TestLogicError();
+            var logicErrors = new LogicErrors(new[] { testLogicError1, testLogicError2 });
+            var combinedMessage = logicErrors.GetCombinedMessages();
+            StringAssert.Contains(message1, combinedMessage);
+            StringAssert.Contains(typeof(TestLogicError).Name, combinedMessage);
         }
     }
 }

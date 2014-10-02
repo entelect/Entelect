@@ -95,6 +95,7 @@ namespace Entelect.ErrorHandling
                 }
                 else
                 {
+                    /* todo rk change to use pascal spaced string when added to lib */
                     stringBuilder.AppendFormat("Error #{0}: {1}{2}", index + 1, logicError.GetType().Name, Environment.NewLine);
                 }
             }
