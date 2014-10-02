@@ -1,12 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 
 namespace Entelect.ErrorHandling
 {
-    /*todo rk, refactor these consturcotrs to use optional paramaters instead*/
-    /* do we need to have the message param? */
     /// <summary>
     /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
     /// </summary>
@@ -17,40 +16,11 @@ namespace Entelect.ErrorHandling
         /// Creates an instance of a logic exception.
         /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
         /// </summary>
-        /// <param name="message">The message to display to the user</param>
         /// <param name="error">The error that caused the exception</param>
-        public LogicException(string message, LogicError error)
-            : base(message)
-        {
-            Errors = new LogicErrors {error};
-        }
-
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            /* todo rk, implement this correctly */
-            base.GetObjectData(info, context);
-        }
-
-        /// <summary>
-        /// Creates an instance of a logic exception.
-        /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
-        /// </summary>
-        /// <param name="message">The message to display to the user</param>
-        /// <param name="error">The error that caused the exception</param>
-        /// <param name="inner">The inner exception</param>
-        public LogicException(string message, LogicError error, Exception inner)
-            : base(message, inner)
-        {
-            Errors = new LogicErrors {error};
-        }
-
-        /// <summary>
-        /// Creates an instance of a logic exception.
-        /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
-        /// </summary>
-        /// <param name="error">The error that caused the exception</param>
-        public LogicException(LogicError error)
-            : this(string.Empty, error)
+        /// <param name="additionalMessage">Any additional information to display about the exception</param>
+        /// <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        public LogicException(LogicError error, string additionalMessage = null, Exception innerException = null)
+            : this(new LogicErrors(error), additionalMessage, innerException)
         {
 
         }
@@ -59,12 +29,27 @@ namespace Entelect.ErrorHandling
         /// Creates an instance of a logic exception.
         /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
         /// </summary>
-        /// <param name="error">The error that caused the exception</param>
-        /// <param name="inner">The inner exception</param>
-        public LogicException(LogicError error, Exception inner)
-            : this(string.Empty, error, inner)
+        /// <param name="errors">The collection of errors that caused this exception</param>
+        /// <param name="additionalMessage">Any additional information to display about the exception</param>
+        /// <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        public LogicException(IEnumerable<LogicError> errors, string additionalMessage = null, Exception innerException = null)
+            : this(new LogicErrors(errors), additionalMessage, innerException)
         {
+            
+        }
 
+        /// <summary>
+        /// Creates an instance of a logic exception.
+        /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
+        /// </summary>
+        /// <param name="errors">The collection of errors that caused this exception</param>
+        /// <param name="additionalMessage">Any additional information to display about the exception</param>
+        /// <param name="innerException">The exception that is the cause of the current exception, or a null reference if no inner exception is specified.</param>
+        public LogicException(LogicErrors errors, string additionalMessage = null, Exception innerException = null)
+            : base(GetAllMessages(additionalMessage, errors), innerException)
+        {
+            Errors = errors;
+            AdditionalMessage = additionalMessage;
         }
 
         /// <summary>
@@ -82,57 +67,52 @@ namespace Entelect.ErrorHandling
         }
 
         /// <summary>
-        /// Creates an instance of a logic exception.
-        /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
+        /// Sets the <see cref="T:System.Runtime.Serialization.SerializationInfo"/> with information about the exception.
         /// </summary>
-        /// <param name="message">The message to display to the user</param>
-        /// <param name="errors">The collection of errors that caused this exception</param>
-        public LogicException(string message, LogicErrors errors)
-            : base(message)
+        /// <param name="info">The <see cref="T:System.Runtime.Serialization.SerializationInfo"/> that holds the serialized object data about the exception being thrown.</param>
+        /// <param name="context">The <see cref="T:System.Runtime.Serialization.StreamingContext"/> that contains contextual information about the source or destination.</param>
+        /// <exception cref="T:System.ArgumentNullException">The <paramref name="info"/> parameter is a null reference.</exception>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
-            Errors = errors;
-        }
-        /// <summary>
-        /// Creates an instance of a logic exception.
-        /// A logic exception is a way to interrupt the program flow that has failed due to one or more <see cref="T:Entelect.ErrorHandling.LogicError"/>
-        /// </summary>
-        /// <param name="errors">The collection of errors that caused this exception</param>
-        public LogicException(LogicErrors errors)
-            : this(errors.GetCombinedMessages(), errors)
-        {
-           
+            if (info == null)
+            {
+                throw new ArgumentNullException("info");
+            }
+            info.AddValue("Errors", Errors);
+            info.AddValue("AdditionalMessage", AdditionalMessage);
+            base.GetObjectData(info, context);
         }
 
         public override string Message
         {
-            get
+            get { return GetAllMessages(AdditionalMessage, Errors); }
+        }
+
+        /// <summary>
+        /// Combines the AdditionalMessage and the messages within all the Errors into one display string with newline characters
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="logicErrors"></param>
+        /// <returns></returns>
+        protected static string GetAllMessages(string message, LogicErrors logicErrors)
+        {
+            var stringBuilder = new StringBuilder();
+            if (!string.IsNullOrWhiteSpace(message))
             {
-                var currentMessage = base.Message;
-                if (!string.IsNullOrWhiteSpace(currentMessage))
-                {
-                    return currentMessage;
-                }
-                if (Errors.Count == 0)
-                {
-                    return string.Empty;
-                }
-                if (Errors.Count == 1)
-                {
-                    return Errors.First().Message;
-                }
-                var stringBuilder = new StringBuilder();
-                for (int index = 0; index < Errors.Count; index++)
-                {
-                    var logicError = Errors[index];
-                    stringBuilder.AppendFormat("Error #{0}: {1}\r\n", index + 1, logicError.Message);
-                }
-                return stringBuilder.ToString();
+                stringBuilder.AppendLine(message);
             }
+            stringBuilder.Append(logicErrors.GetCombinedMessages());
+            return stringBuilder.ToString();
         }
 
         /// <summary>
         /// The collection of errors that caused this exception
         /// </summary>
         public LogicErrors Errors { get; set; }
+
+        /// <summary>
+        /// Any additional information to display about the exception
+        /// </summary>
+        public string AdditionalMessage { get; set; }
     }
 }

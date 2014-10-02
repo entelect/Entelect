@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace Entelect.ErrorHandling
@@ -25,6 +27,16 @@ namespace Entelect.ErrorHandling
         /// <param name="list">The collection of <see cref="T:Entelect.ErrorHandling.LogicError"/> to be contained in the list</param>
         public LogicErrors(IList<LogicError> list) 
             : base(list)
+        {
+        }
+
+        /// <summary>
+        /// A collection of <see cref="T:Entelect.ErrorHandling.LogicError"/>
+        /// Contains a set of helper methods that makes working with multiple logic errors easier.
+        /// </summary>
+        /// <param name="list">The collection of <see cref="T:Entelect.ErrorHandling.LogicError"/> to be contained in the list</param>
+        public LogicErrors(IEnumerable<LogicError> list)
+            : base(list.ToList())
         {
         }
 
@@ -63,12 +75,28 @@ namespace Entelect.ErrorHandling
         /// <returns></returns>
         public string GetCombinedMessages()
         {
-            var builder = new StringBuilder();
-            foreach (var error in this)
+            if (Count == 0)
             {
-                builder.AppendLine(error.Message ?? error.ToString());
+                return string.Empty;
             }
-            return builder.ToString();
+            if (Count == 1)
+            {
+                return this.First().Message;
+            }
+            var stringBuilder = new StringBuilder();
+            for (var index = 0; index < Count; index++)
+            {
+                var logicError = this[index];
+                if (!string.IsNullOrWhiteSpace(logicError.Message))
+                {
+                    stringBuilder.AppendFormat("Error #{0}: {1}{2}", index + 1, logicError.Message, Environment.NewLine);
+                }
+                else
+                {
+                    stringBuilder.AppendFormat("Error #{0}: {1}{2}", index + 1, logicError.GetType().Name, Environment.NewLine);
+                }
+            }
+            return stringBuilder.ToString();
         }
 
         /// <summary>
