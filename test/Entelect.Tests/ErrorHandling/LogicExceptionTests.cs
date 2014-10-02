@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Entelect.ErrorHandling;
 using NUnit.Framework;
@@ -97,6 +98,27 @@ namespace Entelect.Tests.ErrorHandling
             var logicException = new LogicException(logicError);
 // ReSharper disable once AssignNullToNotNullAttribute want to force an exception for the test
             logicException.GetObjectData(null, new StreamingContext());
+        }
+
+        [Test]
+        public void AbilityToCreateLogicExptionWithIEnumerableLogicError()
+        {
+            const string message1 = "Message 1";
+            var error1 = new TestLogicError(message1);
+            const string message2 = "Message 2";
+            var error2 = new TestLogicError(message2);
+            IEnumerable<LogicError> logicError = new List<LogicError> {error1, error2};
+            var logicException = new LogicException(logicError);
+            CollectionAssert.IsNotEmpty(logicException.Errors);
+            CollectionAssert.Contains(logicException.Errors, error1);
+            CollectionAssert.Contains(logicException.Errors, error2);
+        }
+
+        [Test]
+        public void AbilityToCreateLogicExptionWithSerialisationInfo()
+        {
+            var logicErrors = new LogicErrors(new TestLogicError("Testing!"));
+            new SerializableLogicExcpetion(logicErrors, "More Testing");
         }
     }
 }
