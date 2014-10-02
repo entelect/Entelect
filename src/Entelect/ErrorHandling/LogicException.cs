@@ -66,7 +66,7 @@ namespace Entelect.ErrorHandling
             : base(info, context)
         {
             Errors = errors;
-            AdditionalMessage = AdditionalMessage;
+            AdditionalMessage = additionalMessage;
         }
 
         /// <summary>
