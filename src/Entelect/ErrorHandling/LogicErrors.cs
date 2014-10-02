@@ -66,7 +66,9 @@ namespace Entelect.ErrorHandling
         public void ThrowExceptionIfErrors()
         {
             if (HasErrors)
+            {
                 throw new LogicException(this);
+            }
         }
 
         /// <summary>
@@ -110,6 +112,5 @@ namespace Entelect.ErrorHandling
                 Add(logicError);
             }
         }
-
     }
 }
