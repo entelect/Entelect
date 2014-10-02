@@ -1,4 +1,5 @@
-﻿using Entelect.ErrorHandling;
+﻿using System.Collections.Generic;
+using Entelect.ErrorHandling;
 using NUnit.Framework;
 
 namespace Entelect.Tests.ErrorHandling
@@ -40,6 +41,20 @@ namespace Entelect.Tests.ErrorHandling
         }
 
         [Test]
+        public void CanCreateWithIEnumerableLogicError()
+        {
+            var testLogicError = new TestLogicError();
+            var secondTestLogicError = new TestLogicError();
+            IEnumerable<LogicError> errors = new[] {testLogicError, secondTestLogicError};
+            var logicErrors = new LogicErrors(errors);
+            Assert.NotNull(logicErrors);
+            CollectionAssert.IsNotEmpty(logicErrors);
+            CollectionAssert.Contains(logicErrors, testLogicError);
+            CollectionAssert.Contains(logicErrors, secondTestLogicError);
+            Assert.True(logicErrors.HasErrors);
+        }
+
+        [Test]
         public void AbilityToAddMultipleLogicErrorsAtOnceAfterConstructionWhenEmpty()
         {
             var testLogicError = new TestLogicError();
@@ -65,6 +80,27 @@ namespace Entelect.Tests.ErrorHandling
             CollectionAssert.Contains(logicErrors, testLogicError);
             CollectionAssert.Contains(logicErrors, secondTestLogicError);
             Assert.True(logicErrors.HasErrors);
+        }
+
+        [Test]
+        [ExpectedException(typeof(LogicException))]
+        public void ThrowExceptionIfErrors()
+        {
+            var testLogicError = new TestLogicError();
+            var logicErrors = new LogicErrors(testLogicError);
+            logicErrors.ThrowExceptionIfErrors();
+        }
+        [Test]
+        public void GetCombinedMessagesWithMultipleMessages()
+        {
+            const string message1 = "Message 1";
+            var testLogicError1 = new TestLogicError(message1);
+            const string message2 = "Message 2";
+            var testLogicError2 = new TestLogicError(message2);
+            var logicErrors = new LogicErrors(new[] {testLogicError1, testLogicError2});
+            var combinedMessage = logicErrors.GetCombinedMessages();
+            StringAssert.Contains(message1, combinedMessage);
+            StringAssert.Contains(message2, combinedMessage);
         }
     }
 }
