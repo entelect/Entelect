@@ -40,8 +40,9 @@
     <RootNamespaceTitle>Entelect</RootNamespaceTitle>
     <FeedbackEMailAddress>ryank%40entelect.co.za</FeedbackEMailAddress>
     <NamespaceSummaries>
-      <NamespaceSummaryItem name="(global)" isDocumented="False" xmlns="" />
-<NamespaceSummaryItem name="Entelect.Extensions" isDocumented="True" xmlns="">A collection of extensions for the standard .Net libaries that make life a little easier.</NamespaceSummaryItem></NamespaceSummaries>
+      <NamespaceSummaryItem name="(global)" isDocumented="False" />
+<NamespaceSummaryItem name="Entelect.Extensions" isDocumented="True">A collection of extensions for the standard .Net libaries that make life a little easier.</NamespaceSummaryItem>
+<NamespaceSummaryItem name="Entelect.ErrorHandling" isDocumented="True">Contains classes that handle logic/business errors and help with error handlign in general</NamespaceSummaryItem></NamespaceSummaries>
     <VisibleItems>Attributes, InheritedMembers, InheritedFrameworkMembers, Protected, ProtectedInternalAsProtected</VisibleItems>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
