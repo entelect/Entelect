@@ -17,21 +17,8 @@
         /// You can also use logic errors to validate multiple aspects of a class, 
         /// collect all the validation errors and return them at once instead of throwing a single exception for each
         /// </summary>
-        protected LogicError()
-            : this(null)
-        {
-                
-        }
-
-        /// <summary>
-        /// Creates an instance of the logic error class.
-        /// Logic errors are represents errors that can safely be displayed to the user.
-        /// This is so that they know why something has gone wrong, instead of seeing a general error page and can possibly correct themselves.
-        /// You can also use logic errors to validate multiple aspects of a class, 
-        /// collect all the validation errors and return them at once instead of throwing a single exception for each
-        /// </summary>
         /// <param name="message">The message to display to the end user of the system</param>
-        protected LogicError(string message)
+        protected LogicError(string message = null)
         {
             Message = message; 
         }
