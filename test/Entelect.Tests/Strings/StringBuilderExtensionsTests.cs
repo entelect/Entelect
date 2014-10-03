@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Text;
-using NUnit.Framework;
 using Entelect.Extensions;
-namespace Entelect.Tests
+using NUnit.Framework;
+
+namespace Entelect.Tests.Strings
 {
     [TestFixture]
-    public class StringBuilderTests
+    public class StringBuilderExtensionsTests
     {
         [Test]
         public void AddingIntAndNewline()
