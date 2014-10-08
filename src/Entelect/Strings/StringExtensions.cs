@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 // ReSharper disable once CheckNamespace - All extensions are within the same name space otherwise they don't show up in intellisense
 
@@ -34,6 +35,28 @@ namespace Entelect.Extensions
         public static bool Contains(this IEnumerable<string> input, string value, StringComparison stringComparison)
         {
             return input.Any(item => item.Equals(value, stringComparison));
+        }
+
+
+        /// <summary>
+        /// Takes in a Pascal Case string and spaces between the words
+        /// </summary>
+        /// <param name="input">The string to replace</param>
+        /// <returns>The replaced string</returns>
+        public static string PascalToSpacedString(this string input)
+        {
+            const string pascalCaseSplit = @"([a-z](?=[A-Z])|[A-Z](?=[A-Z][a-z]))";
+            return Regex.Replace(input, pascalCaseSplit, "$1 ");
+        }
+
+        /// <summary>
+        /// Takes in a Pascal Case string and splits it into an array of the words
+        /// </summary>
+        /// <param name="input">The string to replace</param>
+        /// <returns>The array of words</returns>
+        public static string[] PascalToSpacedStringArray(this string input)
+        {
+            return input.PascalToSpacedString().Split(' ');
         }
     }
 }
