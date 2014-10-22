@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateTime\DateTimeExtensionsTests.cs" />
     <Compile Include="ErrorHandling\ArgumentNullErrorTests.cs" />
     <Compile Include="ErrorHandling\LogicErrorsTests.cs" />
     <Compile Include="ErrorHandling\LogicErrorTests.cs" />
