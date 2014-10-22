@@ -39,8 +39,8 @@ namespace Entelect.Tests.DateTime
         public void SetTimeToSecondPrecision_ReturnsCorrectDate()
         {
             var date = new System.DateTime(2014, 08, 08);
-            var actualDate = date.SetTime(12, 13, 13, 14);
-            var expectedDate = new System.DateTime(2014, 08, 08, 12, 13, 13, 14);
+            var actualDate = date.SetTime(12, 13, 13);
+            var expectedDate = new System.DateTime(2014, 08, 08, 12, 13, 13, 0);
             Assert.AreEqual(expectedDate, actualDate);
         }
 
@@ -48,8 +48,8 @@ namespace Entelect.Tests.DateTime
         public void SetTimeToMinutePrecision_ReturnsCorrectDate()
         {
             var date = new System.DateTime(2014, 08, 08);
-            var actualDate = date.SetTime(12, 13, 13, 14);
-            var expectedDate = new System.DateTime(2014, 08, 08, 12, 13, 13, 14);
+            var actualDate = date.SetTime(12, 13);
+            var expectedDate = new System.DateTime(2014, 08, 08, 12, 13, 0, 0);
             Assert.AreEqual(expectedDate, actualDate);
         }
 
@@ -157,6 +157,10 @@ namespace Entelect.Tests.DateTime
         [TestCase("1 Oct 2014", "12 Oct 2014", 8)]
         [TestCase("1 Oct 2014", "15 Oct 2014", 11)]
         [TestCase("11 Dec 2013", "16 Jan 2014", 27)]
+        [TestCase("5 Oct 2014", "7 Oct 2014", 2)]
+        [TestCase("4 Oct 2014", "7 Oct 2014", 2)]
+        [TestCase("5 Oct 2014", "14 Oct 2014", 7)]
+        [TestCase("4 Oct 2014", "14 Oct 2014", 7)]
         public void WhenCalculatingTheNumberOfBusinessDays_ReturnCorrectValue(string startDateString, string endDateString, int expectedNumberOfDays)
         {
             var startDate = System.DateTime.Parse(startDateString);
