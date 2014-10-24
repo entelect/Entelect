@@ -218,8 +218,9 @@ namespace Entelect.Extensions
 
         private static int SubtractWeekendDaysDuringRemainingTime(int businessDays, int fullWeekCount, DateTime startDate, DateTime endDate)
         {
+            var totalDays = businessDays;
             // find out if there are weekends during the time exceeding the full weeks
-            if(businessDays > fullWeekCount * 7)
+            if (totalDays > fullWeekCount * 7)
             {
                 // we are here to find out if there is a 1-day or 2-days weekend
                 // in the time interval remaining after subtracting the complete weeks
@@ -229,42 +230,42 @@ namespace Entelect.Extensions
                 {
                     lastDayOfWeek += 7;
                 }
-
+                
                 if(firstDayOfWeek <= 6)
                 {
                     if(lastDayOfWeek >= 7) // Both Saturday and Sunday are in the remaining time interval
                     {
-                        businessDays -= 2;
+                        totalDays -= 2;
                     }
                     else if(lastDayOfWeek >= 6) // Only Saturday is in the remaining time interval
                     {
-                        businessDays -= 1;
+                        totalDays -= 1;
                     }
                     else if(firstDayOfWeek == 0) // Sunday is First day
                     {
-                        businessDays -= 1;
+                        totalDays -= 1;
                     }
                 }
                 else if(firstDayOfWeek <= 7 && lastDayOfWeek >= 7) // Only Sunday is in the remaining time interval
                 {
-                    businessDays -= 1;
+                    totalDays -= 1;
                 }
             }
-            return businessDays;
+            return totalDays;
         }
 
         private static int SubtractBankHolidays(IEnumerable<DateTime> bankHolidays, DateTime startDate, DateTime endDate, int businessDays)
         {
-            // subtract the number of bank holidays during the time interval
+            var totalDays = businessDays;
             foreach(DateTime bankHoliday in bankHolidays)
             {
                 DateTime bh = bankHoliday.Date;
                 if(startDate <= bh && bh <= endDate)
                 {
-                    --businessDays;
+                    --totalDays;
                 }
             }
-            return businessDays;
+            return totalDays;
         }
     }
 }
