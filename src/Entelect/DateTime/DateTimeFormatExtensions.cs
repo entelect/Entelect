@@ -7,6 +7,7 @@ namespace Entelect.Extensions
     /// </summary>
     public static class DateTimeFormatExtensions
     {
+        private const string timeformat = @"hh\:mm";
         /// <summary>
         /// Returns a a status-style string for a given time (as on facbeook , + etc), using a forced reference time. 
         /// The string is shown as a difference between timestamp and reference time for renderings such as "yesterday", "x minutes/hours ago", "Monday etc"
@@ -17,28 +18,36 @@ namespace Entelect.Extensions
         /// <returns>A nice human friendly "status style" string of the difference between the timestamp and reference time. </returns>
         public static string ToStatusStyleString(this DateTime timestamp, DateTime referenceTime)
         {
-            const string timeformat = @"hh\:mm";
+            var timeDifference = (referenceTime - timestamp);
+            if (timeDifference.Days >= 1)
+            {
+                return StyleForDayDifference(timestamp, timeDifference);
+            }
+            return StyleForTimeDifference(timeDifference);
+        }
 
-            var time = (referenceTime - timestamp);
-            if (time.Days >= 5)
+        private static string StyleForDayDifference(DateTime timestamp, TimeSpan timeDifference)
+        {
+            if (timeDifference.Days >= 5)
             {
                 return string.Format("{0} at {1}", timestamp.ToString("d MMMM yyyy"), timestamp.TimeOfDay.ToString(timeformat));
             }
-            if (time.Days >= 1)
+            if (timeDifference.Days > 1)
             {
-                if(time.Days == 1)
-                {
-                    return string.Format("Yesterday at {0}", timestamp.TimeOfDay.ToString(timeformat));
-                }
                 return string.Format("{0} at {1}", timestamp.DayOfWeek.ToString(), timestamp.TimeOfDay.ToString(timeformat));
             }
-            if (time.Hours >= 1)
+            return string.Format("Yesterday at {0}", timestamp.TimeOfDay.ToString(timeformat));
+        }
+
+        private static string StyleForTimeDifference(TimeSpan timeDifference)
+        {
+            if (timeDifference.Hours >= 1)
             {
-                return string.Format("{0} hour{1} ago", time.Hours, time.Hours == 1 ? "" : "s");
+                return string.Format("{0} hour{1} ago", timeDifference.Hours, timeDifference.Hours == 1 ? "" : "s");
             }
-            if (time.Minutes >= 1)
+            if (timeDifference.Minutes >= 1)
             {
-                return string.Format("{0} min{1} ago", time.Minutes, time.Minutes == 1 ? "" : "s");
+                return string.Format("{0} min{1} ago", timeDifference.Minutes, timeDifference.Minutes == 1 ? "" : "s");
             }
             return "Less than a minute ago";
         }
