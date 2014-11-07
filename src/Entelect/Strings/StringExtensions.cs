@@ -58,5 +58,28 @@ namespace Entelect.Extensions
         {
             return input.PascalToSpacedString().Split(' ');
         }
+
+        /// <summary>
+        /// Capitalises the first letter of the provided string, if there are multiple words in the string only the first will be capitalised
+        /// Use this instead of ToTileCase if you wish to preserve camelCase formatting
+        /// </summary>
+        /// <param name="input">The string to capitialise the first letter of</param>
+        /// <returns></returns>
+        public static string CapitaliseFirstLetter(this string input)
+        {
+            return input.Substring(0, 1).ToUpper() + input.Substring(1);
+        }
+
+        /// <summary>
+        /// Replaces all the values in a string, regardless of their case with the new value
+        /// </summary>
+        /// <param name="input">The string to search in</param>
+        /// <param name="oldValue">The value to replace, not case sensitive</param>
+        /// <param name="newValue">The replacement value</param>
+        /// <returns></returns>
+        public static string ReplaceIgnoreCase(this string input, string oldValue, string newValue)
+        {
+            return Regex.Replace(input, oldValue, newValue, RegexOptions.IgnoreCase);
+        }
     }
 }
