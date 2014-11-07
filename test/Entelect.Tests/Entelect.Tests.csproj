@@ -61,6 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Strings\StringBuilderExtensionsTests.cs" />
     <Compile Include="Strings\StringExtensionsTests.cs" />
+    <Compile Include="Types\TypeExtensionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
