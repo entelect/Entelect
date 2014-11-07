@@ -60,5 +60,16 @@ namespace Entelect.Tests.Strings
             input = input.ReplaceIgnoreCase(oldValue, newValue);
             StringAssert.AreEqualIgnoringCase(expected, input);
         }
+
+        [Test]
+        [TestCase("A", "A")]
+        [TestCase("A A A", "AAA")]
+        [TestCase(" A A A ", "AAA")]
+        [TestCase(" Aa aAa aA ", "AaaAaaA")]
+        public void RemoveAllWhitespace(string input, string expected)
+        {
+            input = input.RemoveAllWhitespace();
+            StringAssert.AreEqualIgnoringCase(expected, input);
+        }
     }
 }

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="DateTime\DateTimeFormatExtensions.cs" />
     <Compile Include="DateTime\DateTimeExtensions.cs" />
+    <Compile Include="Enums\EnumExtensions.cs" />
     <Compile Include="ErrorHandling\ArgumentNullError.cs" />
     <Compile Include="ErrorHandling\LogicError.cs" />
     <Compile Include="ErrorHandling\LogicErrors.cs" />

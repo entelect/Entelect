@@ -81,5 +81,16 @@ namespace Entelect.Extensions
         {
             return Regex.Replace(input, oldValue, newValue, RegexOptions.IgnoreCase);
         }
+
+        /// <summary>
+        /// Takes in a string and removes all whitespace in that string, regardless of its position.
+        /// See http://stackoverflow.com/questions/6219454/efficient-way-to-remove-all-whitespace-from-string
+        /// </summary>
+        /// <param name="input">The string to replace</param>
+        /// <returns>The replaced string</returns>
+        public static string RemoveAllWhitespace(this string input)
+        {
+            return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
+        }
     }
 }
