@@ -18,7 +18,9 @@ namespace Entelect.Types
         public static Type GetTypeFromTypeName(string typeName)
         {
             if (typeName == null)
+            {
                 throw new ArgumentNullException("typeName");
+            }
 
             bool isArray = false, isNullable = false;
 
@@ -105,13 +107,19 @@ namespace Entelect.Types
             if (parsedTypeName != null)
             {
                 if (isArray)
+                {
                     parsedTypeName = parsedTypeName + "[]";
+                }
 
                 if (isNullable)
+                {
                     parsedTypeName = String.Concat("System.Nullable`1[", parsedTypeName, "]");
+                }
             }
             else
+            {
                 parsedTypeName = typeName;
+            }
 
             // Expected to throw an exception in case the type has not been recognized.
             return Type.GetType(parsedTypeName);
