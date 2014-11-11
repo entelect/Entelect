@@ -22,106 +22,107 @@ namespace Entelect.Types
                 throw new ArgumentNullException("typeName");
             }
 
-            bool isArray = false, isNullable = false;
+            var isArray = typeName.IndexOf("[]", StringComparison.OrdinalIgnoreCase) != -1;
+            var isNullable = typeName.IndexOf("?", StringComparison.OrdinalIgnoreCase) != -1;
 
-            if (typeName.IndexOf("[]", StringComparison.OrdinalIgnoreCase) != -1)
-            {
-                isArray = true;
-                typeName = typeName.Remove(typeName.IndexOf("[]", StringComparison.OrdinalIgnoreCase), 2);
-            }
+            var formattedTypeName = FormatTypeName(typeName, isArray, isNullable);
 
-            if (typeName.IndexOf("?", StringComparison.OrdinalIgnoreCase) != -1)
-            {
-                isNullable = true;
-                typeName = typeName.Remove(typeName.IndexOf("?", StringComparison.OrdinalIgnoreCase), 1);
-            }
+            var systemTypeName = ExtractSystemTypeNames(formattedTypeName);
 
-            typeName = typeName.ToLower();
-            typeName = typeName.ReplaceIgnoreCase("system.", "");
-            string parsedTypeName = null;
-            switch (typeName)
-            {
-                case "bool":
-                case "boolean":
-                    parsedTypeName = "System.Boolean";
-                    break;
-                case "byte":
-                    parsedTypeName = "System.Byte";
-                    break;
-                case "char":
-                    parsedTypeName = "System.Char";
-                    break;
-                case "datetime":
-                    parsedTypeName = "System.DateTime";
-                    break;
-                case "datetimeoffset":
-                    parsedTypeName = "System.DateTimeOffset";
-                    break;
-                case "decimal":
-                    parsedTypeName = "System.Decimal";
-                    break;
-                case "double":
-                    parsedTypeName = "System.Double";
-                    break;
-                case "float":
-                    parsedTypeName = "System.Single";
-                    break;
-                case "int16":
-                case "short":
-                    parsedTypeName = "System.Int16";
-                    break;
-                case "int32":
-                case "int":
-                    parsedTypeName = "System.Int32";
-                    break;
-                case "int64":
-                case "long":
-                    parsedTypeName = "System.Int64";
-                    break;
-                case "object":
-                    parsedTypeName = "System.Object";
-                    break;
-                case "sbyte":
-                    parsedTypeName = "System.SByte";
-                    break;
-                case "string":
-                    parsedTypeName = "System.String";
-                    break;
-                case "timespan":
-                    parsedTypeName = "System.TimeSpan";
-                    break;
-                case "uint16":
-                case "ushort":
-                    parsedTypeName = "System.UInt16";
-                    break;
-                case "uint32":
-                case "uint":
-                    parsedTypeName = "System.UInt32";
-                    break;
-                case "uint64":
-                case "ulong":
-                    parsedTypeName = "System.UInt64";
-                    break;
-            }
+            var extractedTypeName = ExtractType(systemTypeName, isArray, isNullable, formattedTypeName);
 
-            if (parsedTypeName != null)
+            return Type.GetType(extractedTypeName);
+        }
+
+        private static string ExtractType(string systemTypeName, bool isArray, bool isNullable, string formattedTypeName)
+        {
+            if(systemTypeName != null)
             {
-                if (isArray)
+                if(isArray)
                 {
-                    parsedTypeName = parsedTypeName + "[]";
+                    systemTypeName = systemTypeName + "[]";
                 }
 
-                if (isNullable)
+                if(isNullable)
                 {
-                    parsedTypeName = String.Concat("System.Nullable`1[", parsedTypeName, "]");
+                    systemTypeName = String.Concat("System.Nullable`1[", systemTypeName, "]");
                 }
             }
             else
             {
-                parsedTypeName = typeName;
+                systemTypeName = formattedTypeName;
+            }
+            return systemTypeName;
+        }
+
+        private static string FormatTypeName(string typeName, bool isArray, bool isNullable)
+        {
+            var name = typeName;
+            if(isArray)
+            {
+                name = name.Remove(name.IndexOf("[]", StringComparison.OrdinalIgnoreCase), 2);
             }
 
-            return Type.GetType(parsedTypeName);
+            if(isNullable)
+            {
+                name = name.Remove(name.IndexOf("?", StringComparison.OrdinalIgnoreCase), 1);
+            }
+
+            name = name.ToLower();
+            name = name.ReplaceIgnoreCase("system.", "");
+            return name;
+        }
+
+        private static string ExtractSystemTypeNames(string typeName)
+        {
+            switch(typeName)
+            {
+                case "bool":
+                case "boolean":
+                    return "System.Boolean";
+                case "byte":
+                    return "System.Byte";
+                case "char":
+                    return "System.Char";
+                case "datetime":
+                    return "System.DateTime";
+                case "datetimeoffset":
+                    return "System.DateTimeOffset";
+                case "decimal":
+                    return "System.Decimal";
+                case "double":
+                    return "System.Double";
+                case "float":
+                    return "System.Single";
+                case "int16":
+                case "short":
+                    return "System.Int16";
+                case "int32":
+                case "int":
+                    return "System.Int32";
+                case "int64":
+                case "long":
+                    return "System.Int64";
+                case "object":
+                    return "System.Object";
+                case "sbyte":
+                    return "System.SByte";
+                case "string":
+                    return "System.String";
+                case "timespan":
+                    return "System.TimeSpan";
+                case "uint16":
+                case "ushort":
+                    return "System.UInt16";
+                case "uint32":
+                case "uint":
+                    return "System.UInt32";
+                case "uint64":
+                case "ulong":
+                    return "System.UInt64";
+                default:
+                    return null;
+            }
         }
     }
 }
