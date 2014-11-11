@@ -36,23 +36,24 @@ namespace Entelect.Types
 
         private static string ExtractType(string systemTypeName, bool isArray, bool isNullable, string formattedTypeName)
         {
-            if(systemTypeName != null)
+            var extractedTypeName = systemTypeName;
+            if (extractedTypeName != null)
             {
                 if(isArray)
                 {
-                    systemTypeName = systemTypeName + "[]";
+                    extractedTypeName = extractedTypeName + "[]";
                 }
 
                 if(isNullable)
                 {
-                    systemTypeName = String.Concat("System.Nullable`1[", systemTypeName, "]");
+                    extractedTypeName = String.Concat("System.Nullable`1[", extractedTypeName, "]");
                 }
             }
             else
             {
-                systemTypeName = formattedTypeName;
+                extractedTypeName = formattedTypeName;
             }
-            return systemTypeName;
+            return extractedTypeName;
         }
 
         private static string FormatTypeName(string typeName, bool isArray, bool isNullable)
