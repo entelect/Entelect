@@ -13,7 +13,7 @@ namespace Entelect.Types
         /// Adapted from http://stackoverflow.com/questions/721870/c-sharp-how-can-i-get-type-from-a-string-representation
         /// </summary>
         /// <param name="typeName"></param>
-        /// <returns></returns>
+        /// <returns>Null if type is not recognized</returns>
         /// <exception cref="ArgumentNullException"></exception>
         public static Type GetTypeFromTypeName(string typeName)
         {
@@ -121,7 +121,6 @@ namespace Entelect.Types
                 parsedTypeName = typeName;
             }
 
-            // Expected to throw an exception in case the type has not been recognized.
             return Type.GetType(parsedTypeName);
         }
     }
