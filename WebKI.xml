@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AdditionalMessage property" Url="html/9f1012ae-2d2a-16e7-5bd6-545497922ba7.htm" />
+  <HelpKINode Title="AddRange method" Url="html/e67567e0-524d-ffd1-3fee-c20d782d8133.htm" />
+  <HelpKINode Title="AppendLineFormat method" Url="html/574057ec-a848-45f1-cc7b-b28d834aae1e.htm" />
+  <HelpKINode Title="ArgumentNullError class">
+    <HelpKINode Title="ArgumentNullError Class" Url="html/563aa285-4446-310b-e5f7-3fe73352624f.htm" />
+    <HelpKINode Title="about ArgumentNullError class" Url="html/563aa285-4446-310b-e5f7-3fe73352624f.htm" />
+    <HelpKINode Title="constructor" Url="html/c21c9e20-1762-7125-85f5-bae6b43aded5.htm" />
+    <HelpKINode Title="methods" Url="html/33e076b5-3e42-e876-1365-7a97867083cc.htm" />
+    <HelpKINode Title="properties" Url="html/f094f03a-fce7-61f0-b0fa-39c10b4b6f11.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ArgumentNullError.ArgumentNullError constructor" Url="html/c21c9e20-1762-7125-85f5-bae6b43aded5.htm" />
+  <HelpKINode Title="AsException method" Url="html/e7b7818c-5130-8c5e-b355-af9afca16d43.htm" />
+  <HelpKINode Title="CapitaliseFirstLetter method" Url="html/05f382f9-751d-abcf-dbfd-8c3a5616b2e0.htm" />
+  <HelpKINode Title="Contains method" Url="html/51ed2f5b-977c-6e8a-cf96-d9d958c3937b.htm" />
+  <HelpKINode Title="ConvertRegionalTimeToUtc method" Url="html/0cf6a76c-162e-febd-959f-5c43de27ea2b.htm" />
+  <HelpKINode Title="ConvertUtcToRegionalTime method" Url="html/721539b4-c6e1-1e9a-fadb-9da818e754c8.htm" />
+  <HelpKINode Title="DateTimeExtensions class">
+    <HelpKINode Title="DateTimeExtensions Class" Url="html/c24cf53d-1bbb-4c42-3e1e-6ca1569d2691.htm" />
+    <HelpKINode Title="about DateTimeExtensions class" Url="html/c24cf53d-1bbb-4c42-3e1e-6ca1569d2691.htm" />
+    <HelpKINode Title="methods" Url="html/e7fd0cd0-cee6-c2b2-c7f2-b9335f754078.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DateTimeExtensions.ConvertRegionalTimeToUtc method" Url="html/0cf6a76c-162e-febd-959f-5c43de27ea2b.htm" />
+  <HelpKINode Title="DateTimeExtensions.ConvertUtcToRegionalTime method" Url="html/721539b4-c6e1-1e9a-fadb-9da818e754c8.htm" />
+  <HelpKINode Title="DateTimeExtensions.GetTimespanBetweenDates method" Url="html/2d7472c3-c744-88c1-efa8-632e6c626700.htm" />
+  <HelpKINode Title="DateTimeExtensions.Midnight method" Url="html/1bf1cfb8-0fce-0932-9c63-37c67e1fb1ac.htm" />
+  <HelpKINode Title="DateTimeExtensions.MonthsFromStartDateToEndDate method" Url="html/6bb079fa-6196-977b-ce03-1f5985a1c78f.htm" />
+  <HelpKINode Title="DateTimeExtensions.Noon method" Url="html/e9a6f409-2fa4-b384-8100-ba6918ee18a4.htm" />
+  <HelpKINode Title="DateTimeExtensions.NumberOfBusinessDaysUntil method" Url="html/ae4ee665-4808-545d-e1d8-484252cc4f65.htm" />
+  <HelpKINode Title="DateTimeExtensions.SetTime method" Url="html/1deb36f7-bb24-f6ac-fab2-17e143b198a1.htm" />
+  <HelpKINode Title="DateTimeExtensions.ToFirstDayOfMonth method" Url="html/2e5a7ba8-17a5-92e3-9799-f62ce4267d27.htm" />
+  <HelpKINode Title="DateTimeExtensions.ToFirstDayOfNextMonth method" Url="html/565f1bda-0272-a4b1-2f36-e8f515b95e94.htm" />
+  <HelpKINode Title="DateTimeExtensions.ToJSONTicks method" Url="html/3e62eab0-acbc-3ffc-009b-afb72fc4cb9a.htm" />
+  <HelpKINode Title="DateTimeExtensions.ToLastDayOfMonth method" Url="html/43cecb5e-aecc-b3cc-b001-74b1464af841.htm" />
+  <HelpKINode Title="DateTimeExtensions.ToLastMillisecondOfDay method" Url="html/ee3ec1ed-6ef3-95cd-45b8-7b212ad6a4e4.htm" />
+  <HelpKINode Title="DateTimeFormatExtensions class">
+    <HelpKINode Title="DateTimeFormatExtensions Class" Url="html/77933155-f466-1754-d4b1-8baa5f7f0f6a.htm" />
+    <HelpKINode Title="about DateTimeFormatExtensions class" Url="html/77933155-f466-1754-d4b1-8baa5f7f0f6a.htm" />
+    <HelpKINode Title="methods" Url="html/37d4f442-aa51-ff0e-19ff-577b22e3f79d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DateTimeFormatExtensions.ToStatusStyleString method" Url="html/2a0dd286-8a63-c14a-8821-1bf4bb16f5b5.htm" />
+  <HelpKINode Title="Entelect.ErrorHandling namespace" Url="html/68f1bd45-e604-b1c2-4ce3-dc2194c6bcd9.htm" />
+  <HelpKINode Title="Entelect.ErrorHandling.ArgumentNullError class" Url="html/563aa285-4446-310b-e5f7-3fe73352624f.htm" />
+  <HelpKINode Title="Entelect.ErrorHandling.LogicError class" Url="html/bd4242ee-5c4c-82cd-3528-cd84f20967d5.htm" />
+  <HelpKINode Title="Entelect.ErrorHandling.LogicErrors class" Url="html/0567e8fd-cd7f-c6b2-0264-02d28d640a01.htm" />
+  <HelpKINode Title="Entelect.ErrorHandling.LogicException class" Url="html/7a303cfd-c65e-4bba-70bb-ff0fd58f4bf4.htm" />
+  <HelpKINode Title="Entelect.Extensions namespace" Url="html/162b0ed7-a5b3-6a55-2be5-958dd9ed49c3.htm" />
+  <HelpKINode Title="Entelect.Extensions.DateTimeExtensions class" Url="html/c24cf53d-1bbb-4c42-3e1e-6ca1569d2691.htm" />
+  <HelpKINode Title="Entelect.Extensions.DateTimeFormatExtensions class" Url="html/77933155-f466-1754-d4b1-8baa5f7f0f6a.htm" />
+  <HelpKINode Title="Entelect.Extensions.EnumExtensions class" Url="html/01b20633-0537-4e81-bcb5-a42e93b98467.htm" />
+  <HelpKINode Title="Entelect.Extensions.StringBuilderExtensions class" Url="html/168690b4-4911-32e8-6c09-c81afc38042a.htm" />
+  <HelpKINode Title="Entelect.Extensions.StringExtensions class" Url="html/4f48ea54-b5ce-b55b-1e64-5fc00e7727b0.htm" />
+  <HelpKINode Title="Entelect.Types namespace" Url="html/1a18587b-955e-15ae-c7a4-aa6b7b5b5c68.htm" />
+  <HelpKINode Title="Entelect.Types.TypeExtensions class" Url="html/85335d0a-3fea-d3a6-04b5-d261e2544efa.htm" />
+  <HelpKINode Title="EnumExtensions class">
+    <HelpKINode Title="EnumExtensions Class" Url="html/01b20633-0537-4e81-bcb5-a42e93b98467.htm" />
+    <HelpKINode Title="about EnumExtensions class" Url="html/01b20633-0537-4e81-bcb5-a42e93b98467.htm" />
+    <HelpKINode Title="methods" Url="html/90171793-fbcc-9208-f1d4-2614f4cc4cb0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EnumExtensions.Parse method" Url="html/f57f809c-a077-e767-5254-8499b079f0b6.htm" />
+  <HelpKINode Title="EnumExtensions.ToSpacedString method" Url="html/ea6ad714-af19-900f-3720-dd6570378e46.htm" />
+  <HelpKINode Title="Errors property" Url="html/08837b00-3cae-83bc-2f1d-eabd4b4a2b7e.htm" />
+  <HelpKINode Title="GetAllMessages method" Url="html/78c32f1f-3154-cc95-4183-c6cf66860d3c.htm" />
+  <HelpKINode Title="GetCombinedMessages method" Url="html/4bb50e78-3b2f-8627-7c13-b8d6517f54c7.htm" />
+  <HelpKINode Title="GetObjectData method" Url="html/943d7707-5ade-4eb8-8d88-0764d9be1ad4.htm" />
+  <HelpKINode Title="GetTimespanBetweenDates method" Url="html/2d7472c3-c744-88c1-efa8-632e6c626700.htm" />
+  <HelpKINode Title="GetTypeFromTypeName method" Url="html/728bd068-c1b3-bac3-a09c-af151a355163.htm" />
+  <HelpKINode Title="HasErrors property" Url="html/8a23ce99-f2d0-2dd8-4073-94c2bc03fbb8.htm" />
+  <HelpKINode Title="IsNullOrEmpty method" Url="html/78198adb-0ed1-6af9-4146-0bac66d6bfb2.htm" />
+  <HelpKINode Title="IsNullOrWhiteSpace method" Url="html/6d0f8d8a-9501-f5aa-7998-1b9425f00dba.htm" />
+  <HelpKINode Title="LogicError class">
+    <HelpKINode Title="LogicError Class" Url="html/bd4242ee-5c4c-82cd-3528-cd84f20967d5.htm" />
+    <HelpKINode Title="about LogicError class" Url="html/bd4242ee-5c4c-82cd-3528-cd84f20967d5.htm" />
+    <HelpKINode Title="constructor" Url="html/cbc81065-ac72-fac3-d182-d5c452f00fef.htm" />
+    <HelpKINode Title="methods" Url="html/431d6d25-152f-2259-9803-f34f1ba15c98.htm" />
+    <HelpKINode Title="properties" Url="html/ede485a2-df98-5d0b-a908-15668c8b2fda.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LogicError.AsException method" Url="html/e7b7818c-5130-8c5e-b355-af9afca16d43.htm" />
+  <HelpKINode Title="LogicError.LogicError constructor" Url="html/cbc81065-ac72-fac3-d182-d5c452f00fef.htm" />
+  <HelpKINode Title="LogicError.Message property" Url="html/887ecad7-f152-4298-dc61-2e4079f13c02.htm" />
+  <HelpKINode Title="LogicError.Throw method" Url="html/66a4fbfd-800e-1f7b-4738-b7b9f040f69f.htm" />
+  <HelpKINode Title="LogicErrors class">
+    <HelpKINode Title="LogicErrors Class" Url="html/0567e8fd-cd7f-c6b2-0264-02d28d640a01.htm" />
+    <HelpKINode Title="about LogicErrors class" Url="html/0567e8fd-cd7f-c6b2-0264-02d28d640a01.htm" />
+    <HelpKINode Title="constructor" Url="html/3b9c66ba-fe39-114e-6534-cf5fe626aa0b.htm" />
+    <HelpKINode Title="methods" Url="html/fa5edd08-fd29-faf5-acc7-a3b9597f9e93.htm" />
+    <HelpKINode Title="properties" Url="html/9351cea3-1e12-8e23-84e3-6cfbfd04a9a7.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LogicErrors.AddRange method" Url="html/e67567e0-524d-ffd1-3fee-c20d782d8133.htm" />
+  <HelpKINode Title="LogicErrors.GetCombinedMessages method" Url="html/4bb50e78-3b2f-8627-7c13-b8d6517f54c7.htm" />
+  <HelpKINode Title="LogicErrors.HasErrors property" Url="html/8a23ce99-f2d0-2dd8-4073-94c2bc03fbb8.htm" />
+  <HelpKINode Title="LogicErrors.LogicErrors constructor" Url="html/3b9c66ba-fe39-114e-6534-cf5fe626aa0b.htm" />
+  <HelpKINode Title="LogicErrors.ThrowExceptionIfErrors method" Url="html/a796e98f-a54d-9073-d5d0-a844c6c72b8f.htm" />
+  <HelpKINode Title="LogicException class">
+    <HelpKINode Title="LogicException Class" Url="html/7a303cfd-c65e-4bba-70bb-ff0fd58f4bf4.htm" />
+    <HelpKINode Title="about LogicException class" Url="html/7a303cfd-c65e-4bba-70bb-ff0fd58f4bf4.htm" />
+    <HelpKINode Title="constructor" Url="html/ec854aae-97d6-28b8-714e-556cca973c4c.htm" />
+    <HelpKINode Title="events" Url="html/dad2b38b-d921-0cb3-b424-75c30c6c491c.htm" />
+    <HelpKINode Title="methods" Url="html/288fc2ec-33a7-a5e1-2a68-99b7ec131de7.htm" />
+    <HelpKINode Title="properties" Url="html/1e71800e-949f-afc8-acb3-1f96479ec1b4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LogicException.AdditionalMessage property" Url="html/9f1012ae-2d2a-16e7-5bd6-545497922ba7.htm" />
+  <HelpKINode Title="LogicException.Errors property" Url="html/08837b00-3cae-83bc-2f1d-eabd4b4a2b7e.htm" />
+  <HelpKINode Title="LogicException.GetAllMessages method" Url="html/78c32f1f-3154-cc95-4183-c6cf66860d3c.htm" />
+  <HelpKINode Title="LogicException.GetObjectData method" Url="html/943d7707-5ade-4eb8-8d88-0764d9be1ad4.htm" />
+  <HelpKINode Title="LogicException.LogicException constructor" Url="html/ec854aae-97d6-28b8-714e-556cca973c4c.htm" />
+  <HelpKINode Title="LogicException.Message property" Url="html/583690a4-10ff-c7af-90c3-5e250261073f.htm" />
+  <HelpKINode Title="Message property">
+    <HelpKINode Title="LogicError.Message Property " Url="html/887ecad7-f152-4298-dc61-2e4079f13c02.htm" />
+    <HelpKINode Title="LogicException.Message Property " Url="html/583690a4-10ff-c7af-90c3-5e250261073f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Midnight method" Url="html/1bf1cfb8-0fce-0932-9c63-37c67e1fb1ac.htm" />
+  <HelpKINode Title="MonthsFromStartDateToEndDate method" Url="html/6bb079fa-6196-977b-ce03-1f5985a1c78f.htm" />
+  <HelpKINode Title="Noon method" Url="html/e9a6f409-2fa4-b384-8100-ba6918ee18a4.htm" />
+  <HelpKINode Title="NumberOfBusinessDaysUntil method" Url="html/ae4ee665-4808-545d-e1d8-484252cc4f65.htm" />
+  <HelpKINode Title="Parse method" Url="html/f57f809c-a077-e767-5254-8499b079f0b6.htm" />
+  <HelpKINode Title="PascalToSpacedString method" Url="html/72da6bf5-e2e7-a2a6-626f-d6453686c00f.htm" />
+  <HelpKINode Title="PascalToSpacedStringArray method" Url="html/8e48d971-b334-a65e-0ac8-ca2039231bb5.htm" />
+  <HelpKINode Title="RemoveAllWhitespace method" Url="html/46784b14-5be8-234f-2235-368c1680d3ef.htm" />
+  <HelpKINode Title="ReplaceIgnoreCase method" Url="html/bb09620c-a73c-e1ea-7e91-8acca2d56489.htm" />
+  <HelpKINode Title="SetTime method" Url="html/1deb36f7-bb24-f6ac-fab2-17e143b198a1.htm" />
+  <HelpKINode Title="StringBuilderExtensions class">
+    <HelpKINode Title="StringBuilderExtensions Class" Url="html/168690b4-4911-32e8-6c09-c81afc38042a.htm" />
+    <HelpKINode Title="about StringBuilderExtensions class" Url="html/168690b4-4911-32e8-6c09-c81afc38042a.htm" />
+    <HelpKINode Title="methods" Url="html/a6f12bfa-12ae-6ef6-c805-5873e0d902d8.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StringBuilderExtensions.AppendLineFormat method" Url="html/574057ec-a848-45f1-cc7b-b28d834aae1e.htm" />
+  <HelpKINode Title="StringExtensions class">
+    <HelpKINode Title="StringExtensions Class" Url="html/4f48ea54-b5ce-b55b-1e64-5fc00e7727b0.htm" />
+    <HelpKINode Title="about StringExtensions class" Url="html/4f48ea54-b5ce-b55b-1e64-5fc00e7727b0.htm" />
+    <HelpKINode Title="methods" Url="html/93f90303-df80-508d-4571-972f45615027.htm" />
+  </HelpKINode>
+  <HelpKINode Title="StringExtensions.CapitaliseFirstLetter method" Url="html/05f382f9-751d-abcf-dbfd-8c3a5616b2e0.htm" />
+  <HelpKINode Title="StringExtensions.Contains method" Url="html/51ed2f5b-977c-6e8a-cf96-d9d958c3937b.htm" />
+  <HelpKINode Title="StringExtensions.IsNullOrEmpty method" Url="html/78198adb-0ed1-6af9-4146-0bac66d6bfb2.htm" />
+  <HelpKINode Title="StringExtensions.IsNullOrWhiteSpace method" Url="html/6d0f8d8a-9501-f5aa-7998-1b9425f00dba.htm" />
+  <HelpKINode Title="StringExtensions.PascalToSpacedString method" Url="html/72da6bf5-e2e7-a2a6-626f-d6453686c00f.htm" />
+  <HelpKINode Title="StringExtensions.PascalToSpacedStringArray method" Url="html/8e48d971-b334-a65e-0ac8-ca2039231bb5.htm" />
+  <HelpKINode Title="StringExtensions.RemoveAllWhitespace method" Url="html/46784b14-5be8-234f-2235-368c1680d3ef.htm" />
+  <HelpKINode Title="StringExtensions.ReplaceIgnoreCase method" Url="html/bb09620c-a73c-e1ea-7e91-8acca2d56489.htm" />
+  <HelpKINode Title="Throw method" Url="html/66a4fbfd-800e-1f7b-4738-b7b9f040f69f.htm" />
+  <HelpKINode Title="ThrowExceptionIfErrors method" Url="html/a796e98f-a54d-9073-d5d0-a844c6c72b8f.htm" />
+  <HelpKINode Title="ToFirstDayOfMonth method" Url="html/2e5a7ba8-17a5-92e3-9799-f62ce4267d27.htm" />
+  <HelpKINode Title="ToFirstDayOfNextMonth method" Url="html/565f1bda-0272-a4b1-2f36-e8f515b95e94.htm" />
+  <HelpKINode Title="ToJSONTicks method" Url="html/3e62eab0-acbc-3ffc-009b-afb72fc4cb9a.htm" />
+  <HelpKINode Title="ToLastDayOfMonth method" Url="html/43cecb5e-aecc-b3cc-b001-74b1464af841.htm" />
+  <HelpKINode Title="ToLastMillisecondOfDay method" Url="html/ee3ec1ed-6ef3-95cd-45b8-7b212ad6a4e4.htm" />
+  <HelpKINode Title="ToSpacedString method" Url="html/ea6ad714-af19-900f-3720-dd6570378e46.htm" />
+  <HelpKINode Title="ToStatusStyleString method" Url="html/2a0dd286-8a63-c14a-8821-1bf4bb16f5b5.htm" />
+  <HelpKINode Title="TypeExtensions class">
+    <HelpKINode Title="TypeExtensions Class" Url="html/85335d0a-3fea-d3a6-04b5-d261e2544efa.htm" />
+    <HelpKINode Title="about TypeExtensions class" Url="html/85335d0a-3fea-d3a6-04b5-d261e2544efa.htm" />
+    <HelpKINode Title="constructor" Url="html/8f845bf5-ed96-8153-1dd5-515478416e23.htm" />
+    <HelpKINode Title="methods" Url="html/df335c2e-a23d-5db5-67b0-048371e8ead1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypeExtensions.GetTypeFromTypeName method" Url="html/728bd068-c1b3-bac3-a09c-af151a355163.htm" />
+  <HelpKINode Title="TypeExtensions.TypeExtensions constructor" Url="html/8f845bf5-ed96-8153-1dd5-515478416e23.htm" />
+</HelpKI>

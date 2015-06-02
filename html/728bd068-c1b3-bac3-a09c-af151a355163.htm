@@ -1,0 +1,57 @@
+﻿<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="../icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding-en-US.css" />
+    <script type="text/javascript" src="../scripts/branding.js"> </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>TypeExtensions.GetTypeFromTypeName Method </title>
+    <meta name="Language" content="en-us" />
+    <meta name="System.Keywords" content="GetTypeFromTypeName method" />
+    <meta name="System.Keywords" content="TypeExtensions.GetTypeFromTypeName method" />
+    <meta name="Microsoft.Help.F1" content="Entelect.Types.TypeExtensions.GetTypeFromTypeName" />
+    <meta name="Microsoft.Help.Id" content="M:Entelect.Types.TypeExtensions.GetTypeFromTypeName(System.String)" />
+    <meta name="Description" content="Takes in a type name string and tries to get the built in system type from that Adapted from http://stackoverflow.com/questions/721870/c-sharp-how-can-i-get-type-from-a-string-representation" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="BrandingAware" content="true" />
+    
+    <meta name="container" content="Entelect.Types" />
+    <meta name="file" content="728bd068-c1b3-bac3-a09c-af151a355163" />
+    <meta name="guid" content="728bd068-c1b3-bac3-a09c-af151a355163" />
+    
+    <link rel="stylesheet" type="text/css" href="../styles/branding-Website.css" />
+    <script type="text/javascript" src="../scripts/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../scripts/branding-Website.js"></script>
+  </head>
+  <body onload="OnLoad('cs')">
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <div class="pageHeader" id="PageHeader">Entelect Library - Core Documentation<form id="SearchForm" method="get" action="#" onsubmit="javascript:TransferToSearchPage(); return false;"><input id="SearchTextBox" type="text" maxlength="200" /><button id="SearchButton" type="submit"></button></form></div>
+    <div class="pageBody">
+      <div class="leftNav" id="leftNav"><div id="tocNav"><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="a2892f1c-9d52-55e2-dcb3-dbc3a98002c2.htm" title="Entelect Library - Core Documentation" tocid="roottoc">Entelect Library - Core Documentation</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="a2892f1c-9d52-55e2-dcb3-dbc3a98002c2.htm" title="Entelect" tocid="a2892f1c-9d52-55e2-dcb3-dbc3a98002c2">Entelect</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="1a18587b-955e-15ae-c7a4-aa6b7b5b5c68.htm" title="Entelect.Types" tocid="1a18587b-955e-15ae-c7a4-aa6b7b5b5c68">Entelect.Types</a></div><div class="toclevel0" data-toclevel="0"><a class="tocCollapsed" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="85335d0a-3fea-d3a6-04b5-d261e2544efa.htm" title="TypeExtensions Class" tocid="85335d0a-3fea-d3a6-04b5-d261e2544efa">TypeExtensions Class</a></div><div class="toclevel1" data-toclevel="1" data-childrenloaded="true"><a class="tocExpanded" onclick="javascript: Toggle(this);" href="#!"></a><a data-tochassubtree="true" href="df335c2e-a23d-5db5-67b0-048371e8ead1.htm" title="TypeExtensions Methods" tocid="df335c2e-a23d-5db5-67b0-048371e8ead1">TypeExtensions Methods</a></div><div class="toclevel2 current" data-toclevel="2"><a data-tochassubtree="false" href="728bd068-c1b3-bac3-a09c-af151a355163.htm" title="GetTypeFromTypeName Method " tocid="728bd068-c1b3-bac3-a09c-af151a355163">GetTypeFromTypeName Method </a></div></div></div><div id="TocResize" class="tocResize" onmousedown="OnMouseDown(event);"><img id="ResizeImageIncrease" src="../icons/TocOpen.gif" onclick="OnIncreaseToc()" alt="Click or drag to resize" title="Click or drag to resize"><img id="ResizeImageReset" src="../icons/TocClose.gif" style="display:none" onclick="OnResetToc()" alt="Click or drag to resize" title="Click or drag to resize"></div><div class="topicContent" id="TopicContent">
+        <table class="titleTable">
+          <tr>
+            <td class="titleColumn">TypeExtensions<span id="LST898694AA_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST898694AA_0?cpp=::|nu=.");</script>GetTypeFromTypeName Method </td>
+          </tr>
+        </table>
+        <span class="introStyle"></span>
+        <div class="summary">
+            Takes in a type name string and tries to get the built in system type from that
+            Adapted from http://stackoverflow.com/questions/721870/c-sharp-how-can-i-get-type-from-a-string-representation
+            </div>
+        <p> </p>
+        <strong>Namespace:</strong> <a href="1a18587b-955e-15ae-c7a4-aa6b7b5b5c68.htm">Entelect.Types</a><br /><strong>Assembly:</strong> Entelect (in Entelect.dll) Version: 0.0.79<div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Syntax</span></div><div id="ID1RBSection" class="collapsibleSection"><div class="codeSnippetContainer"><div class="codeSnippetContainerTabs"><div id="ID0EACA_tab1" class="codeSnippetContainerTabSingle">C#</div></div><div class="codeSnippetContainerCodeContainer"><div class="codeSnippetToolBar"><div class="codeSnippetToolBarText"><a id="ID0EACA_copyCode" href="#" onclick="javascript:CopyToClipboard('ID0EACA');return false;" title="Copy">Copy</a></div></div><div id="ID0EACA_code_Div1" class="codeSnippetContainerCode" style="display: block"><pre xml:space="preserve"><span class="keyword">public</span> <span class="keyword">static</span> <span class="identifier">Type</span> <span class="identifier">GetTypeFromTypeName</span>(
+	<span class="identifier">string</span> <span class="parameter">typeName</span>
+)</pre></div></div></div><script type="text/javascript">AddLanguageTabSet("ID0EACA");</script><h4 class="subHeading">Parameters</h4><dl><dt><span class="parameter">typeName</span></dt><dd>Type: <span class="nolink">System<span id="LST898694AA_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST898694AA_1?cs=.|vb=.|cpp=::|nu=.|fs=.");</script>String</span><br /><p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[Missing &lt;param name="typeName"/&gt; documentation for "M:Entelect.Types.TypeExtensions.GetTypeFromTypeName(System.String)"]</p></dd></dl><h4 class="subHeading">Return Value</h4>Type: <span class="nolink">Type</span><br />Null if type is not recognized</div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Exceptions</span></div><div id="ID2RBSection" class="collapsibleSection"><div class="tableSection"><table><tr><th>Exception</th><th>Condition</th></tr><tr><td><span class="nolink">ArgumentNullException</span></td><td /></tr></table></div></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID3RB')" onkeypress="SectionExpandCollapse_CheckKey('ID3RB', event)" tabindex="0"><img id="ID3RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID3RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="85335d0a-3fea-d3a6-04b5-d261e2544efa.htm">TypeExtensions Class</a></div><div class="seeAlsoStyle"><a href="1a18587b-955e-15ae-c7a4-aa6b7b5b5c68.htm">Entelect.Types Namespace</a></div></div></div>
+    </div>
+    <div id="pageFooter" class="pageFooter">
+      <div class="feedbackLink">Send comments on this topic to
+        <a id="HT_MailLink" href="mailto:ryank%40entelect.co.za?Subject=Entelect Library - Core Documentation">ryank@entelect.co.za</a></div>
+      <script type="text/javascript">
+        var HT_mailLink = document.getElementById("HT_MailLink");
+        var HT_mailLinkText = HT_mailLink.innerHTML;
+        HT_mailLink.href += ": " + document.title + "\u0026body=" + encodeURIComponent("Your feedback is used to improve the documentation and the product. Your e-mail address will not be used for any other purpose and is disposed of after the issue you report is resolved. While working to resolve the issue that you report, you may be contacted via e-mail to get further details or clarification on the feedback you sent. After the issue you report has been addressed, you may receive an e-mail to let you know that your feedback has been addressed.");
+        HT_mailLink.innerHTML = HT_mailLinkText;
+        </script> </div>
+  </body>
+</html>

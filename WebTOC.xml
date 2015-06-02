@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="32269b08-5253-44e4-8310-521f80e2a9a7" Title="Entelect" Url="html/a2892f1c-9d52-55e2-dcb3-dbc3a98002c2.htm">
+    <HelpTOCNode Id="eeaeba3a-6297-4921-b1fc-58189b4a1da2" Title="Entelect.ErrorHandling" Url="html/68f1bd45-e604-b1c2-4ce3-dc2194c6bcd9.htm">
+      <HelpTOCNode Id="7dd4a5d7-44a2-4559-8b9d-784aeaa36960" Title="ArgumentNullError Class" Url="html/563aa285-4446-310b-e5f7-3fe73352624f.htm">
+        <HelpTOCNode Title="ArgumentNullError Constructor " Url="html/c21c9e20-1762-7125-85f5-bae6b43aded5.htm" />
+        <HelpTOCNode Title="ArgumentNullError Methods" Url="html/33e076b5-3e42-e876-1365-7a97867083cc.htm" />
+        <HelpTOCNode Title="ArgumentNullError Properties" Url="html/f094f03a-fce7-61f0-b0fa-39c10b4b6f11.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="b3dafd00-c8c6-4c65-a997-25009be7fcad" Title="LogicError Class" Url="html/bd4242ee-5c4c-82cd-3528-cd84f20967d5.htm">
+        <HelpTOCNode Title="LogicError Constructor " Url="html/cbc81065-ac72-fac3-d182-d5c452f00fef.htm" />
+        <HelpTOCNode Id="0a1ad121-96cd-40ad-826b-936ed147d4a5" Title="LogicError Methods" Url="html/431d6d25-152f-2259-9803-f34f1ba15c98.htm">
+          <HelpTOCNode Title="AsException Method " Url="html/e7b7818c-5130-8c5e-b355-af9afca16d43.htm" />
+          <HelpTOCNode Title="Throw Method " Url="html/66a4fbfd-800e-1f7b-4738-b7b9f040f69f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ff4057eb-9b18-48c3-812c-15be1f0d4480" Title="LogicError Properties" Url="html/ede485a2-df98-5d0b-a908-15668c8b2fda.htm">
+          <HelpTOCNode Title="Message Property " Url="html/887ecad7-f152-4298-dc61-2e4079f13c02.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="339caa97-68ee-48b6-aa3c-b6f047ec31c6" Title="LogicErrors Class" Url="html/0567e8fd-cd7f-c6b2-0264-02d28d640a01.htm">
+        <HelpTOCNode Id="87e288f8-b403-4c76-9d0b-34b13c946715" Title="LogicErrors Constructor " Url="html/3b9c66ba-fe39-114e-6534-cf5fe626aa0b.htm">
+          <HelpTOCNode Title="LogicErrors Constructor " Url="html/62ad5b42-5b4a-d5d4-92bd-d5053b0e2821.htm" />
+          <HelpTOCNode Title="LogicErrors Constructor (LogicError)" Url="html/b0d05989-9850-613d-3ea9-3ff9854ed21e.htm" />
+          <HelpTOCNode Title="LogicErrors Constructor (IEnumerable(LogicError))" Url="html/4f633e8f-e654-2842-80d2-d6b520806219.htm" />
+          <HelpTOCNode Title="LogicErrors Constructor (IList(LogicError))" Url="html/ba8cbd5e-2db9-7051-0048-3a83eb06d4b4.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="780a95f1-e8b1-47fb-9847-da15e7c8780e" Title="LogicErrors Methods" Url="html/fa5edd08-fd29-faf5-acc7-a3b9597f9e93.htm">
+          <HelpTOCNode Title="AddRange Method " Url="html/e67567e0-524d-ffd1-3fee-c20d782d8133.htm" />
+          <HelpTOCNode Title="GetCombinedMessages Method " Url="html/4bb50e78-3b2f-8627-7c13-b8d6517f54c7.htm" />
+          <HelpTOCNode Title="ThrowExceptionIfErrors Method " Url="html/a796e98f-a54d-9073-d5d0-a844c6c72b8f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6ad41b2b-65b9-44f9-b2fa-6f1f9a0009e6" Title="LogicErrors Properties" Url="html/9351cea3-1e12-8e23-84e3-6cfbfd04a9a7.htm">
+          <HelpTOCNode Title="HasErrors Property " Url="html/8a23ce99-f2d0-2dd8-4073-94c2bc03fbb8.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="fe5e3c21-cffe-4a9a-9774-cfae557102c3" Title="LogicException Class" Url="html/7a303cfd-c65e-4bba-70bb-ff0fd58f4bf4.htm">
+        <HelpTOCNode Id="146e4d8c-0478-4e2b-b6e5-b833daccc4df" Title="LogicException Constructor " Url="html/ec854aae-97d6-28b8-714e-556cca973c4c.htm">
+          <HelpTOCNode Title="LogicException Constructor (LogicError, String, Exception)" Url="html/f06626c3-513e-d4ea-b5a3-9d46e4e5567c.htm" />
+          <HelpTOCNode Title="LogicException Constructor (IEnumerable(LogicError), String, Exception)" Url="html/8145c0a5-48d1-b3d9-8dc6-887fa3af5b92.htm" />
+          <HelpTOCNode Title="LogicException Constructor (LogicErrors, String, Exception)" Url="html/ab67409a-b83f-aa52-1ee2-f38955c55189.htm" />
+          <HelpTOCNode Title="LogicException Constructor (SerializationInfo, StreamingContext, LogicErrors, String)" Url="html/5c515d41-864e-40bb-c8e1-bf6c0f1fd5d4.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f6681018-c60a-4853-bc3b-7ac6ca4472a4" Title="LogicException Methods" Url="html/288fc2ec-33a7-a5e1-2a68-99b7ec131de7.htm">
+          <HelpTOCNode Title="GetAllMessages Method " Url="html/78c32f1f-3154-cc95-4183-c6cf66860d3c.htm" />
+          <HelpTOCNode Title="GetObjectData Method " Url="html/943d7707-5ade-4eb8-8d88-0764d9be1ad4.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="9ef68a74-aaad-4313-a7b9-83665b0e7b86" Title="LogicException Properties" Url="html/1e71800e-949f-afc8-acb3-1f96479ec1b4.htm">
+          <HelpTOCNode Title="AdditionalMessage Property " Url="html/9f1012ae-2d2a-16e7-5bd6-545497922ba7.htm" />
+          <HelpTOCNode Title="Errors Property " Url="html/08837b00-3cae-83bc-2f1d-eabd4b4a2b7e.htm" />
+          <HelpTOCNode Title="Message Property " Url="html/583690a4-10ff-c7af-90c3-5e250261073f.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="LogicException Events" Url="html/dad2b38b-d921-0cb3-b424-75c30c6c491c.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d254005d-7ef5-4644-9498-3e45d79b8c1e" Title="Entelect.Extensions" Url="html/162b0ed7-a5b3-6a55-2be5-958dd9ed49c3.htm">
+      <HelpTOCNode Id="f8de4c5f-308e-4936-ab98-4d1c06f8ab47" Title="DateTimeExtensions Class" Url="html/c24cf53d-1bbb-4c42-3e1e-6ca1569d2691.htm">
+        <HelpTOCNode Id="33576fc0-7cdd-45b0-9a70-c42b711a6070" Title="DateTimeExtensions Methods" Url="html/e7fd0cd0-cee6-c2b2-c7f2-b9335f754078.htm">
+          <HelpTOCNode Title="ConvertRegionalTimeToUtc Method " Url="html/0cf6a76c-162e-febd-959f-5c43de27ea2b.htm" />
+          <HelpTOCNode Title="ConvertUtcToRegionalTime Method " Url="html/721539b4-c6e1-1e9a-fadb-9da818e754c8.htm" />
+          <HelpTOCNode Title="GetTimespanBetweenDates Method " Url="html/2d7472c3-c744-88c1-efa8-632e6c626700.htm" />
+          <HelpTOCNode Title="Midnight Method " Url="html/1bf1cfb8-0fce-0932-9c63-37c67e1fb1ac.htm" />
+          <HelpTOCNode Title="MonthsFromStartDateToEndDate Method " Url="html/6bb079fa-6196-977b-ce03-1f5985a1c78f.htm" />
+          <HelpTOCNode Title="Noon Method " Url="html/e9a6f409-2fa4-b384-8100-ba6918ee18a4.htm" />
+          <HelpTOCNode Title="NumberOfBusinessDaysUntil Method " Url="html/ae4ee665-4808-545d-e1d8-484252cc4f65.htm" />
+          <HelpTOCNode Id="c8d138f0-34f8-4005-8bcc-4254c5f3286b" Title="SetTime Method " Url="html/1deb36f7-bb24-f6ac-fab2-17e143b198a1.htm">
+            <HelpTOCNode Title="SetTime Method (DateTime, Int32, Int32)" Url="html/378b62be-4d9c-3108-f852-133efd6a0a9d.htm" />
+            <HelpTOCNode Title="SetTime Method (DateTime, Int32, Int32, Int32)" Url="html/137b049e-fe0a-44e5-0e1f-33b1c68c5ca8.htm" />
+            <HelpTOCNode Title="SetTime Method (DateTime, Int32, Int32, Int32, Int32)" Url="html/625f5f8b-4ec9-65f9-0309-bd071f88d766.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="ToFirstDayOfMonth Method " Url="html/2e5a7ba8-17a5-92e3-9799-f62ce4267d27.htm" />
+          <HelpTOCNode Title="ToFirstDayOfNextMonth Method " Url="html/565f1bda-0272-a4b1-2f36-e8f515b95e94.htm" />
+          <HelpTOCNode Title="ToJSONTicks Method " Url="html/3e62eab0-acbc-3ffc-009b-afb72fc4cb9a.htm" />
+          <HelpTOCNode Title="ToLastDayOfMonth Method " Url="html/43cecb5e-aecc-b3cc-b001-74b1464af841.htm" />
+          <HelpTOCNode Title="ToLastMillisecondOfDay Method " Url="html/ee3ec1ed-6ef3-95cd-45b8-7b212ad6a4e4.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="a74f6a0a-6cc7-436f-9573-6d41fa45fb81" Title="DateTimeFormatExtensions Class" Url="html/77933155-f466-1754-d4b1-8baa5f7f0f6a.htm">
+        <HelpTOCNode Id="350f9c61-a767-4a6b-a3f8-21b2eabdb007" Title="DateTimeFormatExtensions Methods" Url="html/37d4f442-aa51-ff0e-19ff-577b22e3f79d.htm">
+          <HelpTOCNode Id="4273b572-6bc1-4bbf-b3a9-d5400f578f76" Title="ToStatusStyleString Method " Url="html/2a0dd286-8a63-c14a-8821-1bf4bb16f5b5.htm">
+            <HelpTOCNode Title="ToStatusStyleString Method (DateTime)" Url="html/6c5d4138-da88-ea97-ae60-a7e8579f8ed6.htm" />
+            <HelpTOCNode Title="ToStatusStyleString Method (DateTime, DateTime)" Url="html/14694cdb-dfee-e82c-8303-2b2b4ba9b1da.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="9ea350ce-813e-404e-93e3-4f7898145d79" Title="EnumExtensions Class" Url="html/01b20633-0537-4e81-bcb5-a42e93b98467.htm">
+        <HelpTOCNode Id="28ce2115-00ad-45e4-a5c8-f167bf14a901" Title="EnumExtensions Methods" Url="html/90171793-fbcc-9208-f1d4-2614f4cc4cb0.htm">
+          <HelpTOCNode Id="308421c5-32c1-40c7-b587-874dfa438a09" Title="Parse Method " Url="html/f57f809c-a077-e767-5254-8499b079f0b6.htm">
+            <HelpTOCNode Title="Parse(T) Method (String)" Url="html/fb0a623c-e21e-61bb-3494-e25abd574231.htm" />
+            <HelpTOCNode Title="Parse(T) Method (String, T)" Url="html/efc4cca9-5d2f-3917-9033-2fb73193f33c.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="ToSpacedString Method " Url="html/ea6ad714-af19-900f-3720-dd6570378e46.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="d02e5f3a-22d9-46ee-9314-65d51f2a2cdb" Title="StringBuilderExtensions Class" Url="html/168690b4-4911-32e8-6c09-c81afc38042a.htm">
+        <HelpTOCNode Id="b7677051-64c4-4d8e-ad9d-0f37dbb2f9a3" Title="StringBuilderExtensions Methods" Url="html/a6f12bfa-12ae-6ef6-c805-5873e0d902d8.htm">
+          <HelpTOCNode Id="2efea84e-21a4-4b76-924d-a222edf0b0b8" Title="AppendLineFormat Method " Url="html/574057ec-a848-45f1-cc7b-b28d834aae1e.htm">
+            <HelpTOCNode Title="AppendLineFormat Method (StringBuilder, String, Object)" Url="html/5e67956b-5480-08e0-9590-e9035dc6aa07.htm" />
+            <HelpTOCNode Title="AppendLineFormat Method (StringBuilder, String, Object[])" Url="html/21e427ef-dd0d-1ad8-9047-cbc63dfc2312.htm" />
+            <HelpTOCNode Title="AppendLineFormat Method (StringBuilder, String, Object, Object)" Url="html/13e3fe48-d0ca-277c-4c8b-30017becb1c3.htm" />
+            <HelpTOCNode Title="AppendLineFormat Method (StringBuilder, String, Object, Object, Object)" Url="html/9182f181-5638-e9a0-40a9-6d16cc41a140.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="88888136-d665-4383-87d9-3eea1d3cbc68" Title="StringExtensions Class" Url="html/4f48ea54-b5ce-b55b-1e64-5fc00e7727b0.htm">
+        <HelpTOCNode Id="467f2507-4143-4e32-a8bc-4083224e2e6f" Title="StringExtensions Methods" Url="html/93f90303-df80-508d-4571-972f45615027.htm">
+          <HelpTOCNode Title="CapitaliseFirstLetter Method " Url="html/05f382f9-751d-abcf-dbfd-8c3a5616b2e0.htm" />
+          <HelpTOCNode Id="dbfd84cc-7a9e-4cd8-81bb-02d6ad9abbb6" Title="Contains Method " Url="html/51ed2f5b-977c-6e8a-cf96-d9d958c3937b.htm">
+            <HelpTOCNode Title="Contains Method (IEnumerable(String), String, StringComparison)" Url="html/ed4da46a-4e81-5e6d-a700-52eb1d5cd463.htm" />
+            <HelpTOCNode Title="Contains Method (String, String, StringComparison)" Url="html/1d05fbe4-bd75-55b6-6cba-f0a54c65ff78.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="IsNullOrEmpty Method " Url="html/78198adb-0ed1-6af9-4146-0bac66d6bfb2.htm" />
+          <HelpTOCNode Title="IsNullOrWhiteSpace Method " Url="html/6d0f8d8a-9501-f5aa-7998-1b9425f00dba.htm" />
+          <HelpTOCNode Title="PascalToSpacedString Method " Url="html/72da6bf5-e2e7-a2a6-626f-d6453686c00f.htm" />
+          <HelpTOCNode Title="PascalToSpacedStringArray Method " Url="html/8e48d971-b334-a65e-0ac8-ca2039231bb5.htm" />
+          <HelpTOCNode Title="RemoveAllWhitespace Method " Url="html/46784b14-5be8-234f-2235-368c1680d3ef.htm" />
+          <HelpTOCNode Title="ReplaceIgnoreCase Method " Url="html/bb09620c-a73c-e1ea-7e91-8acca2d56489.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="bbba65ce-3c13-43ae-ba42-9195cc71da77" Title="Entelect.Types" Url="html/1a18587b-955e-15ae-c7a4-aa6b7b5b5c68.htm">
+      <HelpTOCNode Id="e93fecb2-e8bc-4874-bc90-a68f4b71edcb" Title="TypeExtensions Class" Url="html/85335d0a-3fea-d3a6-04b5-d261e2544efa.htm">
+        <HelpTOCNode Title="TypeExtensions Constructor " Url="html/8f845bf5-ed96-8153-1dd5-515478416e23.htm" />
+        <HelpTOCNode Id="1b909a22-01ec-43ae-8993-5dc84fd35bf2" Title="TypeExtensions Methods" Url="html/df335c2e-a23d-5db5-67b0-048371e8ead1.htm">
+          <HelpTOCNode Title="GetTypeFromTypeName Method " Url="html/728bd068-c1b3-bac3-a09c-af151a355163.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
