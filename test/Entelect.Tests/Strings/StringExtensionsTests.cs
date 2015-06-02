@@ -71,5 +71,27 @@ namespace Entelect.Tests.Strings
             input = input.RemoveAllWhitespace();
             StringAssert.AreEqualIgnoringCase(expected, input);
         }
+
+        [Test]
+        [TestCase(null, true)]
+        [TestCase("", true)]
+        [TestCase(" ", false)]
+        [TestCase(" Aa aAa aA ", false)]
+        public void IsNullOrEmpty(string input, bool expected)
+        {
+            var result = input.IsNullOrEmpty();
+            Assert.AreEqual(expected, result);
+        }
+
+        [Test]
+        [TestCase(null, true)]
+        [TestCase("", true)]
+        [TestCase(" ", true)]
+        [TestCase(" Aa aAa aA ", false)]
+        public void IsNullOrWhiteSpace(string input, bool expected)
+        {
+            var result = input.IsNullOrWhiteSpace();
+            Assert.AreEqual(expected, result);
+        }
     }
 }

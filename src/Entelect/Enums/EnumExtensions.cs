@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 namespace Entelect.Extensions
 {
     /// <summary>
@@ -30,8 +28,10 @@ namespace Entelect.Extensions
         /// <exception cref="System.ArgumentException">T must be an enumerated type</exception>
         public static T Parse<T>(string value) where T : struct, IConvertible
         {
-            if (!typeof(T).IsEnum)
+            if(!typeof(T).IsEnum)
+            {
                 throw new ArgumentException("T must be an enumerated type");
+            }
             return ParseEnum<T>(value, default(T), true);
         }
 
@@ -47,10 +47,16 @@ namespace Entelect.Extensions
         /// <exception cref="System.ArgumentException">T must be an enumerated type</exception>
         public static T Parse<T>(string value, T defaultValue) where T : struct, IConvertible
         {
-            if (!typeof(T).IsEnum)
+            if(!typeof(T).IsEnum)
+            {
                 throw new ArgumentException("T must be an enumerated type");
-            if (string.IsNullOrWhiteSpace(value))
+            }
+                
+            if(string.IsNullOrWhiteSpace(value))
+            {
                 return defaultValue;
+            }
+                
             return ParseEnum(value, defaultValue, false);
 
         }
@@ -69,11 +75,17 @@ namespace Entelect.Extensions
         {
             foreach (T item in Enum.GetValues(typeof(T)))
             {
-                if (item.ToString().Equals(value.RemoveAllWhitespace(), StringComparison.OrdinalIgnoreCase))
+                if(item.ToString().Equals(value.RemoveAllWhitespace(), StringComparison.OrdinalIgnoreCase))
+                {
                     return item;
+                }
+                    
             }
-            if (!throwExceptionIfNotFound)
+            if(!throwExceptionIfNotFound)
+            {
                 return defaultValue;
+            }
+                
             throw new ArgumentException(string.Format("value {0} could not be converted to an enum of type {1}", value,
                                                       defaultValue.GetType().FullName));
         }

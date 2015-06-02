@@ -8,7 +8,7 @@ Core .net libraries used by [Entelect](http://www.entelect.co.za)
 
 Install via [NuGet](https://www.nuget.org/packages/Entelect/)
 
-Read the [Documentation](http://sereph.github.io/Entelect/)
+Read the [Documentation](http://entelect.github.io/Entelect/)
 
 ##How To Contribute
 
