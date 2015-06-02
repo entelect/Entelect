@@ -92,5 +92,27 @@ namespace Entelect.Extensions
         {
             return new string(input.ToCharArray().Where(c => !Char.IsWhiteSpace(c)).ToArray());
         }
+
+        /// <summary>
+        /// Indicates whether the spesified string is null or Empty.
+        /// Wraps System.String.IsNullOrEmpty
+        /// </summary>
+        /// <param name="input">The string to test</param>
+        /// <returns>False if input contains characters</returns>
+        public static bool IsNullOrEmpty(this string input)
+        {
+            return string.IsNullOrEmpty(input);
+        }
+
+        /// <summary>
+        /// Indicates whether the spesified string is null or Empty or only whitespace.
+        /// Wraps System.String.IsNullOrWhiteSpace
+        /// </summary>
+        /// <param name="input">The string to test</param>
+        /// <returns>False if input contains characters that are not whitespace characters</returns>
+        public static bool IsNullOrWhiteSpace(this string input)
+        {
+            return string.IsNullOrWhiteSpace(input);
+        }
     }
 }
